@@ -21,11 +21,8 @@ void loop() {
 
   Rt = 10 * v / (5 - v); // Calculate the resistance value of the thermistor
 
-  T2 = 1 / (1 / (273.15 + T1) + (log(Rt / R) / B)) - 273.15;
+  T2 = 1 / (1 / (273.15 + T1) + (log(Rt / R) / B)) - 273.15; // Degrees Celsius
 
-  Serial.print("Current temperature is: ");
   Serial.print(T2);
-  Serial.println(" degrees Celsius");
-  Serial.println("---------------------------");
   delay(5000);
 }
